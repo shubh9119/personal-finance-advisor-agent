@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: -0.012em;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ambient Glassmorphic Background Canvas */
+.ambient-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(circle at 12% 15%, rgba(249, 115, 22, 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 88% 18%, rgba(124, 58, 237, 0.14) 0%, transparent 40%),
+    radial-gradient(circle at 50% 55%, rgba(147, 51, 234, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 75% 85%, rgba(245, 158, 11, 0.10) 0%, transparent 35%),
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.10) 0%, transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.ambient-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+}
+
+/* Apple & Microsoft Fluent Acrylic Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04), 0 4px 10px -2px rgba(0, 0, 0, 0.02);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.03), 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 16px 32px -6px rgba(124, 58, 237, 0.08), 0 6px 12px -2px rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  background: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+/* Custom interactive slider */
+input[type="range"] {
+  accent-color: #7c3aed;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.7);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.9);
+}

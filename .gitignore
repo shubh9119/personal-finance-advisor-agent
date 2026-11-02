@@ -1,0 +1,31 @@
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+frontend/out/
+build/
+frontend/build/
+
+# Python & Backend
+__pycache__/
+backend/app/**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.env.local
+.venv
+env/
+venv/
+ENV/
+.pytest_cache/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
