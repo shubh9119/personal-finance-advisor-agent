@@ -1,5 +1,8 @@
 # Retail Banking Domain | Agentic AI Personal Finance Advisor
 
+**GitHub Repository:** https://github.com/shubh9119/personal-finance-advisor-agent  
+**Author:** shubh9119 (ss7944844@gmail.com)
+
 ---
 
 ## 1. Executive Summary & Problem Understanding
